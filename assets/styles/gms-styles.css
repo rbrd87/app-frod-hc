@@ -5,14 +5,15 @@
     --blue: #2a4285;
     --darkRed: #91272d;
     --red: #da3a44;
-    --green: #4dcc68;
+    --green: #289743;
+    --orange: #d1862c;
     --white: #fff;
     --grey: #c0c0c0;
 }
 
 body {
     font-family: "Euclid Circular A", sans-serif;
-    color: white;
+    color: var(--white);
     background: linear-gradient(0deg, #0a161fde, #0a161fde), url(../images/DSC08416-scaled.jpeg);
     min-height: 100%;
     background-repeat: no-repeat;
@@ -24,19 +25,42 @@ body {
 .gms-table {
     width: 100%;
     margin: 0;
-    border-collapse: collapse
+    border-collapse: collapse;
+    color: var(--navy);
+}
+
+.gms-table-results {
+    border: 1px solid var(--red);
 }
 
 .gms-table th {
+    font-size: 18px;
+    height: 60px;
     text-align: left;
-    background-color: silver
+    background-color: var(--red);
+    border-color: var(--red)!important;
 }
 
 .gms-table th,
 .gms-table td {
-    border: 1px solid;
-    padding: 3px 10px;
-    border-color: silver
+    border-left: 1px solid var(--red);
+    padding: 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--white);
+}
+
+tr:nth-child(even) {
+    background-color: #e8eefc;
+}
+
+.gms-table td a {
+    color: var(--darkRed);
+}
+
+.gms-table td a:hover {
+    color: var(--red);
 }
 
 .gms-footnote,
@@ -45,8 +69,8 @@ body {
 }
 
 .gms-clubteam {
-    font-weight: 700;
-    background-color: rgb(228, 228, 228);
+    background-color: var(--blue)!important;
+    color: var(--white);
 }
 
 .gms-filter>div {
@@ -59,14 +83,6 @@ body {
 
 .gms-filter legend {
     padding: 0px
-}
-
-.gms-detaillink {
-    cursor: pointer
-}
-
-.gms-detaillink:hover {
-    background-color: yellow
 }
 
 /* This styling sets alignment for specific tables */
@@ -96,7 +112,7 @@ body {
 }
 
 .gms-draw {
-    background-color: dimgray
+    background-color: var(--orange)
 }
 
 .gms-loss {
@@ -106,7 +122,7 @@ body {
 .gms-win,
 .gms-draw,
 .gms-loss {
-    color: white;
+    color: var(--white);
     font-weight: 700
 }
 
@@ -172,7 +188,7 @@ body {
 .gms-cardnoscore {
     font-weight: 700;
     border-radius: 0.375rem;
-    background-color: white
+    background-color: var(--white)
 }
 
 .gms-cardaway {
@@ -186,7 +202,7 @@ body {
 
 .gms-cardstatus {
     background-color: black;
-    color: white;
+    color: var(--white);
     margin: 0.25rem auto;
     width: fit-content;
     padding: 0.25rem 0.5rem
@@ -304,7 +320,8 @@ body {
 
 #nextFixt table,
 #prevRes table {
-    min-height: 87px !important;
+    min-height: 150px !important;
+    margin: 3rem 0;
 }
 
 #nextFixt .gms-footnote,
