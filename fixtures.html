@@ -11,7 +11,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/styles/gms-styles.css">
-    <title>AFLHC - Home</title>
+    <title>AFLHC - Fixtures</title>
 </head>
 
 <body>
@@ -28,10 +28,10 @@
             <div class="collapse navbar-collapse aflhc-nav" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="/app-frod-hc/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/app-frod-hc/fixtures.html">Fixtures & Results</a>
+                        <a class="nav-link active" aria-current="page" href="#">Fixtures & Results</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/app-frod-hc/table.html">League Table</a>
@@ -49,65 +49,31 @@
     <!-- end of Nav Bar -->
 
     <!--section-1-->
-    <section class="jumbotron first-jumbotron jumbotron-fluid text-center">
+    <section class="jumbotron jumbotron-fluid text-center">
         <!--Main heading-->
-        <div class="row">
-            <div class="col">
-                <img src="../app-frod-hc/assets/images/logo.webp" alt="Appleby Frodingham Hockey Logo" id="main-logo">
-                <h1 id="team-name">Appleby Frodingham Ladies Hockey Club</h1>
-            </div>
-            <!--End of main heading-->
-        </div>
-        <div class="row">
-            <div class="col">
-                <a href="/app-frod-hc/fixtures.html"><button class="btn custom-button">View Fixtures</button></a>
-            </div>
-            <div class="col">
-                <button class="btn custom-button">Amay Team Info</button>
-            </div>
-        </div>
+        <header>
+            <h1 class="display-3" id="team-name">Appleby Frodingham Ladies HC</h1>
+        </header>
+        <!--End of main heading-->
     </section>
     <!--end of section-1-->
 
     <!--section-2-->
-    <section class="jumbotron second-jumbotron jumbotron-fluid text-center">
-        <!--Main heading-->
-        <div class="container-md cstm-container">
-            <h2 id="about">About Us</h2>
-            <img src="../app-frod-hc/assets/images/team.webp" alt="Appleby Frodingham Hockey Logo" id="team-photo">
-            <p>We are a small friendly club which can trace its origins back to the early 1920's based in Scunthorpe, North Lincolnshire.<br>
-                At present, we run only one Ladies team and for the season 2023/2024 we will be playing in the Yorkshire & North East - Wold Women's Division 1 following the reorganisation of the league structures by England Hockey.
-                <br>All of our home games are at Brumby Hall Sports Ground, Scunthorpe. The sand-based pitch is a hockey-specific facility and forms part of a major development of the outdoor playing facilities by Appleby Frodingham Works Athletic Club.
-                We are always looking for new players of all ages (13yrs +) and ability. <br>So, if you've not picked up your hockey stick in a while, you've just moved into the area or just want to come and play please use our Contact page to send us a message and we'll get back to you ASAP.</p>
-        </div>
-        <!--End of main heading-->
-    </section>
-    <!--end of section-2-->
-
-    <!--section-3-->
     <!--Page container-->
     <section id="main-container" class="container-fluid" style="max-width: 1440px">
+        <h2 class="display-5 pageTitle" id="team-name">Fixtures and Results</h2>
         <section class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <h4 class="label-text">Previous Result</h4>
-                    <div id="prevRes"></div>
-                </div>
-                <div class="col">
-                    <h4 class="label-text">Next Fixture</h4>
-                    <div id="nextFixt"></div>
-                </div>
-            </div>
+            <div id="fixtures-list"></div>
         </section>
     </section>
-    <!--end of section-3-->
+    <!--end of section-2-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/js/general.js"></script>
+    <script src="./assets/js/fixtures.js"></script>
 </body>
 
 </html>

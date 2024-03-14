@@ -1,0 +1,365 @@
+/* This styling applies to all GMS tables */
+:root {
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    --navy: #0a161f;
+    --blue: #2a4285;
+    --darkRed: #91272d;
+    --red: #da3a44;
+    --white: #fff;
+    --grey: #c0c0c0;
+}
+
+body {
+    font-family: "Euclid Circular A", sans-serif;
+    color: white;
+    background: linear-gradient(0deg, #0a161fde, #0a161fde), url(../images/DSC08416-scaled.jpeg);
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.gms-table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse
+}
+
+.gms-table th {
+    text-align: left;
+    background-color: silver
+}
+
+.gms-table th,
+.gms-table td {
+    border: 1px solid;
+    padding: 3px 10px;
+    border-color: silver
+}
+
+.gms-footnote,
+.gms-filter {
+    margin: 2rem 0
+}
+
+.gms-clubteam {
+    font-weight: 700;
+    background-color: rgb(228, 228, 228);
+}
+
+.gms-filter>div {
+    margin: 0 0 1rem
+}
+
+.gms-filter fieldset {
+    width: fit-content
+}
+
+.gms-filter legend {
+    padding: 0px
+}
+
+.gms-detaillink {
+    cursor: pointer
+}
+
+.gms-detaillink:hover {
+    background-color: yellow
+}
+
+/* This styling sets alignment for specific tables */
+.gms-table-results th:nth-child(4),
+.gms-table-results td:nth-child(4) {
+    text-align: center
+}
+
+.gms-table-league th:not(:first-child) {
+    min-width: 5em
+}
+
+.gms-table-league td:nth-child(n+3),
+.gms-table-league th:nth-child(n+3) {
+    text-align: right
+}
+
+/* This ensures the 'Date' does not wrap on the fixtures or results table */
+.gms-table-fixtures td:first-child,
+.gms-table-results td:first-child {
+    white-space: nowrap;
+}
+
+/* The following will highlight team or club win, draw and loss on results */
+.gms-win {
+    background-color: green
+}
+
+.gms-draw {
+    background-color: dimgray
+}
+
+.gms-loss {
+    background-color: red
+}
+
+.gms-win,
+.gms-draw,
+.gms-loss {
+    color: white;
+    font-weight: 700
+}
+
+/* This makes GMS tables responsive on smaller screens */
+@media screen and (max-width: 767px) {
+    .gms-table {
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap
+    }
+
+    .gms-nomobile {
+        display: none
+    }
+}
+
+/* Styling for fixtures and results displayed as list and fixture details */
+.gms-list>*+* {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem
+}
+
+.gms-list+.gms-footnote {
+    margin-top: 1rem
+}
+
+.gms-card {
+    text-align: center;
+    padding: 3px 3px;
+    border-radius: 0.5rem
+}
+
+.gms-card,
+.gms-cardtime,
+.gms-cardnoscore,
+.gms-fixturedetails>div {
+    border: 1px solid;
+    border-color: silver
+}
+
+.gms-cardtitle {
+    font-weight: 700;
+    font-size: larger
+}
+
+.gms-cardfixture,
+.gms-cardscorers {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center
+}
+
+.gms-cardhome {
+    flex: 1 1 0%;
+    text-align: right
+}
+
+.gms-carddivide {
+    padding: 0.25rem 0.5rem
+}
+
+.gms-cardtime,
+.gms-cardnoscore {
+    font-weight: 700;
+    border-radius: 0.375rem;
+    background-color: white
+}
+
+.gms-cardaway {
+    flex: 1 1 0%;
+    text-align: left
+}
+
+.gms-cardscorers {
+    font-size: smaller
+}
+
+.gms-cardstatus {
+    background-color: black;
+    color: white;
+    margin: 0.25rem auto;
+    width: fit-content;
+    padding: 0.25rem 0.5rem
+}
+
+.gms-fixture .gms-card>* {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem
+}
+
+.gms-fixturedetails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem
+}
+
+.gms-fixturedetails>div {
+    flex-grow: 1;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem
+}
+
+.gms-fixturedetails img {
+    display: inline;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    margin-right: 0.25rem
+}
+
+.gms-fixturedetails ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+
+.gms-players li {
+    display: flex;
+    align-items: center
+}
+
+.gms-players svg {
+    width: 1rem;
+    height: 1rem
+}
+
+/* Creates a loader image for the AJAX wait */
+.gms-loader {
+    margin: 1rem auto;
+    border: 16px solid silver;
+    border-top: 16px solid black;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: gms-spin 1s linear infinite
+}
+
+@keyframes gms-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Custom Classes */
+@font-face {
+    font-family: 'lightsiderregular';
+    src: url('../fonts/lightsider-webfont.woff2') format('woff2'),
+        url('../fonts/lightsider-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.active {
+    color: var(--red);
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.aflhc-nav {
+    justify-content: center !important;
+    background-color: var(--navy);
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.navbar-toggler {
+    border: 1px solid rgb(238, 238, 238);
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: var(--bs-navbar-toggler-icon-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.pageTitle {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.label-text {
+    display: flex;
+    justify-content: center;
+}
+
+#nextFixt table,
+#prevRes table {
+    min-height: 87px !important;
+}
+
+#nextFixt .gms-footnote,
+#prevRes .gms-footnote {
+    display: none !important;
+}
+
+.first-jumbotron {
+    display: flex;
+    background-color: #0a161f2c;
+    height: 50vh;
+    font-size: 34px;
+    margin-bottom: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0!important;
+}
+
+.first-jumbotron h1 {
+    font-family: "lightsiderregular";
+}
+
+.custom-button {
+    background-color: var(--darkRed);
+    color: var(--white);
+    text-transform: uppercase;
+    height: 50px;
+    width: 168px;
+    font-size: 16px;
+    margin: 50px 20px;
+}
+
+.second-jumbotron {
+    display: flex;
+    background-color: var(--darkRed);
+    min-height: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 0!important;
+}
+
+#main-logo {
+    margin-bottom: 3rem;
+}
+
+#team-photo {
+    margin: 1rem 1rem 2rem 1rem;
+}
+
+.cstm-container {
+    margin: 2rem 3rem;
+}
+
+.cstm-container h2 {
+    font-size: 40px;
+}
