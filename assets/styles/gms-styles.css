@@ -5,6 +5,7 @@
     --blue: #2a4285;
     --darkRed: #91272d;
     --red: #da3a44;
+    --green: #4dcc68;
     --white: #fff;
     --grey: #c0c0c0;
 }
@@ -91,7 +92,7 @@ body {
 
 /* The following will highlight team or club win, draw and loss on results */
 .gms-win {
-    background-color: green
+    background-color: var(--green)
 }
 
 .gms-draw {
@@ -99,7 +100,7 @@ body {
 }
 
 .gms-loss {
-    background-color: red
+    background-color: var(--red)
 }
 
 .gms-win,
