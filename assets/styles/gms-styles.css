@@ -318,17 +318,6 @@ tr:nth-child(even) {
     justify-content: center;
 }
 
-#nextFixt table,
-#prevRes table {
-    min-height: 150px !important;
-    margin: 3rem 0;
-}
-
-#nextFixt .gms-footnote,
-#prevRes .gms-footnote {
-    display: none !important;
-}
-
 .first-jumbotron {
     display: flex;
     background-color: #0a161f2c;
@@ -363,6 +352,7 @@ tr:nth-child(even) {
     min-height: fit-content;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
     padding: 0!important;
 }
 
@@ -380,4 +370,66 @@ tr:nth-child(even) {
 
 .cstm-container h2 {
     font-size: 40px;
+}
+
+.gallery {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.footer {
+    border-top: 5px solid white;
+    background-color: var(--navy);
+    color: var(--white);
+    padding-bottom: 2rem;
+}
+
+.footer-headers h3 {
+    margin: 1rem 0rem;
+}
+
+.footer-headers h3 {
+    margin: 1rem 0rem;
+}
+
+.footer-nav {
+    text-align: left;
+}
+
+.footer-nav p, .footer-info-bar p {
+    margin-bottom: 0;
+}
+
+.footer-nav a {
+    color: var(--white);
+}
+
+.footer-nav a:hover {
+    color: var(--red);
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-address {
+    text-align: right;
+}
+
+.eng-hock {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.footer-info-bar {
+    background-color: var(--red);
+    padding: 0.25rem;
 }
