@@ -22,6 +22,10 @@ body {
     background-size: cover;
 }
 
+h2 {
+    font-size: 40px;
+}
+
 .gms-table {
     width: 100%;
     margin: 0;
@@ -38,7 +42,7 @@ body {
     height: 60px;
     text-align: left;
     background-color: var(--red);
-    border-color: var(--red)!important;
+    border-color: var(--red) !important;
 }
 
 .gms-table th,
@@ -69,7 +73,7 @@ tr:nth-child(even) {
 }
 
 .gms-clubteam {
-    background-color: var(--blue)!important;
+    background-color: var(--blue) !important;
     color: var(--white);
 }
 
@@ -308,11 +312,6 @@ tr:nth-child(even) {
     background-size: 100%;
 }
 
-.pageTitle {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
 .label-text {
     display: flex;
     justify-content: center;
@@ -329,7 +328,7 @@ tr:nth-child(even) {
     align-content: center;
     justify-content: center;
     align-items: center;
-    padding: 0!important;
+    padding: 0 !important;
 }
 
 .first-jumbotron h1 {
@@ -353,7 +352,21 @@ tr:nth-child(even) {
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
-    padding: 0!important;
+    padding: 0 !important;
+}
+
+.aflhc-jumbotron {
+    background-color: #2a42856c;
+    color: var(--white);
+    font-family: 'lightsiderregular';
+    height: 175px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.aflhc-jumbotron h1 {
+    line-height: 0.7;
 }
 
 #main-logo {
@@ -396,7 +409,8 @@ tr:nth-child(even) {
     text-align: left;
 }
 
-.footer-nav p, .footer-info-bar p {
+.footer-nav p,
+.footer-info-bar p {
     margin-bottom: 0;
 }
 
@@ -426,10 +440,96 @@ tr:nth-child(even) {
     align-content: center;
     justify-content: flex-start;
     align-items: center;
+    margin-top: -2rem;
     padding-bottom: 1rem;
 }
 
 .footer-info-bar {
+    display: flex;
     background-color: var(--red);
     padding: 0.25rem;
+    justify-content: center;
+    margin-top: 0.5rem;
 }
+
+.max-width-1440 {
+    max-width: 1440px;
+}
+
+/* Gallery Grid */
+.gallery {
+    padding: 1rem;
+}
+
+#categoryGrid {
+    margin: 1rem 5%;
+    display: grid;
+    grid-template-rows: 400px 400px 400px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "pic1 pic2 pic3"
+        "pic4 pic5 pic5"
+        "pic6 pic6 pic8";
+}
+
+.gallery h2 {
+    padding-top: 10px;
+}
+
+#pic1 {
+    grid-area: pic1;
+    background-image: url(../images/401751975_668547298715977_1024261383074092866_n.jpg);
+}
+
+#pic2 {
+    grid-area: pic2;
+    background-image: url(../images/401756475_668548328715874_8487531560033406537_n.jpg);
+}
+
+#pic3 {
+    grid-area: pic3;
+    background-image: url(../images/401781172_668549335382440_5461447320660050328_n.jpg);
+}
+
+#pic4 {
+    grid-area: pic4;
+    background-image: url(../images/401760347_668547085382665_5709642953624116521_n.jpg);
+}
+
+#pic5 {
+    grid-area: pic5;
+    background-image: url(../images/401812036_668547805382593_3908249330780677324_n.jpg);
+}
+
+#pic6 {
+    grid-area: pic6;
+    background-image: url(../images/401849466_668547008716006_5808394984422268653_n.jpg);
+}
+
+#pic7 {
+    grid-area: pic7;
+    background-image: url(../images/401825461_668548048715902_8877046718980888045_n.jpg);
+}
+
+#pic8 {
+    grid-area: pic8;
+    background-image: url(../images/400112166_668548585382515_3706238430599869471_n.jpg);
+}
+
+.categoryGridArea {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    display: grid;
+    align-content: end;
+}
+/* END Gallery Grid*/
+
+/* Media Queries */
+
+@media only screen and (max-width: 1024px) {
+    
+}
+
+@media only screen and (max-width: 600px) {}
