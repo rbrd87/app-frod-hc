@@ -1,0 +1,22 @@
+{
+  "name": "app-frod-hc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbrd87/app-frod-hc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rbrd87/app-frod-hc/issues"
+  },
+  "homepage": "https://github.com/rbrd87/app-frod-hc#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.30"
+  }
+}
